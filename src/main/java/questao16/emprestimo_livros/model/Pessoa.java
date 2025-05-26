@@ -1,4 +1,4 @@
-package questao16.emprestimo_livros.models;
+package questao16.emprestimo_livros.model;
 
 import java.util.Objects;
 
