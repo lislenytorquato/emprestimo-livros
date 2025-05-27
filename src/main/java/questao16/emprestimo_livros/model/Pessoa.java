@@ -3,13 +3,23 @@ package questao16.emprestimo_livros.model;
 import java.util.Objects;
 
 public class Pessoa {
+    private Long id;
     private String nome;
 
     public Pessoa() {
     }
 
-    public Pessoa(String nome) {
+    public Pessoa(Long id, String nome) {
+        this.id = id;
         this.nome = nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -24,11 +34,11 @@ public class Pessoa {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Pessoa pessoa = (Pessoa) o;
-        return Objects.equals(nome, pessoa.nome);
+        return Objects.equals(id, pessoa.id) && Objects.equals(nome, pessoa.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(nome);
+        return Objects.hash(id, nome);
     }
 }
