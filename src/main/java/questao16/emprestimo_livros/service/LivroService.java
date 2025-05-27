@@ -11,6 +11,7 @@ public class LivroService {
 
     public void criarLivros(Livro livroNovo){
         Livro livro = new Livro();
+        livro.setId(livroNovo.getId());
         livro.setTitulo(livroNovo.getTitulo());
         livro.setAutor(livroNovo.getAutor());
         livros.add(livro);

@@ -4,17 +4,27 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Emprestimo {
+   private Long id;
    private Livro livro;
    private Pessoa pessoa;
-   private LocalDate data_vencimento;
+   private LocalDate dataVencimento;
 
     public Emprestimo() {
     }
 
-    public Emprestimo(Livro livro, Pessoa pessoa, LocalDate data_vencimento) {
+    public Emprestimo(Long id, Livro livro, Pessoa pessoa, LocalDate dataVencimento) {
+        this.id = id;
         this.livro = livro;
         this.pessoa = pessoa;
-        this.data_vencimento = data_vencimento;
+        this.dataVencimento = dataVencimento;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Livro getLivro() {
@@ -33,23 +43,23 @@ public class Emprestimo {
         this.pessoa = pessoa;
     }
 
-    public LocalDate getData_vencimento() {
-        return data_vencimento;
+    public LocalDate getDataVencimento() {
+        return dataVencimento;
     }
 
-    public void setData_vencimento(LocalDate data_vencimento) {
-        this.data_vencimento = data_vencimento;
+    public void setDataVencimento(LocalDate dataVencimento) {
+        this.dataVencimento = dataVencimento;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Emprestimo that = (Emprestimo) o;
-        return Objects.equals(livro, that.livro) && Objects.equals(pessoa, that.pessoa) && Objects.equals(data_vencimento, that.data_vencimento);
+        return Objects.equals(id, that.id) && Objects.equals(livro, that.livro) && Objects.equals(pessoa, that.pessoa) && Objects.equals(dataVencimento, that.dataVencimento);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(livro, pessoa, data_vencimento);
+        return Objects.hash(id, livro, pessoa, dataVencimento);
     }
 }
