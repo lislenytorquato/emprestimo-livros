@@ -23,6 +23,10 @@ public class LivroServiceTest {
         Livro livroNovo = TestHelper.criarLivro1();
         List<Livro> livrosNovos = List.of(livroNovo);
         livroService.criarLivros(livroNovo);
+
+        Assertions.assertEquals(1, livroService.listarLivros().size());
+        Assertions.assertEquals(livrosNovos.get(0).getTitulo(),livroService.listarLivros().get(0).getTitulo());
+        Assertions.assertEquals(livrosNovos.get(0).getAutor(),livroService.listarLivros().get(0).getAutor());
         Assertions.assertEquals(livrosNovos, livroService.listarLivros());
     }
 
