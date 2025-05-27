@@ -7,7 +7,7 @@ import java.util.List;
 
 public class LivroService {
 
-    List<Livro> livros = new ArrayList<>();
+   private List<Livro> livros = new ArrayList<>();
 
     public void criarLivros(Livro livroNovo){
         Livro livro = new Livro();

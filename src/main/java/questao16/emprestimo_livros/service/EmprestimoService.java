@@ -8,8 +8,8 @@ import java.util.List;
 
 public class EmprestimoService {
 
-    List<Emprestimo> emprestimos = new ArrayList<>();
-    List<Emprestimo> emprestimosAtrasados = new ArrayList<>();
+   private List<Emprestimo> emprestimos = new ArrayList<>();
+   private List<Emprestimo> emprestimosAtrasados = new ArrayList<>();
 
     public void criarEmprestimo(Emprestimo emprestimoNovo){
         Emprestimo emprestimo = new Emprestimo();

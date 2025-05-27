@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PessoaService {
-    List<Pessoa> pessoas = new ArrayList<>();
+   private List<Pessoa> pessoas = new ArrayList<>();
 
     public void criarPessoas(Pessoa pessoaNova){
         Pessoa pessoa = new Pessoa();
